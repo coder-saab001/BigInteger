@@ -22,32 +22,68 @@ An Implementation of BigInteger Library in C++
 
 * **BigInteger()** --> Default Constructor. Itializes number to zero.
 * **BigInteger(string s)** --> Takes a number string as parameter(with or without sign).
-* **BigInteger(string s, bool sin)** --> Takes absolute value as string as sign true and false for -va and +ve number respectively.
-* **BigInteger(int n)** --> Initialize object from a int
+* **BigInteger(string s, bool sin)** --> Takes absolute value as string and sign true and false for -ve and +ve number respectively.
+* **BigInteger(int n)** --> Initialize object from an int.
 
 ### Get-Set Functions
 
 * **setNumber(string s)** --> Set the value of number to number string s(without sign).
-* **getNumber()** --> Returns (const)referance to string of the number(without sign).
-* **setSign(bool s)** --> Set sign of number to + and - by s being false and true repectively.
-* **getSign()** --> Returns (const)referance to bool sign of number.
+* **getNumber()** --> Returns (const)reference to string of the number(without sign).
+* **setSign(bool s)** --> Set sign of number to +ve and -ve by s being false and true repectively.
+* **getSign()** --> Returns (const)reference to bool sign of number.
 * **absolute()** --> Returns BigInteger object to absolute value of number.
 
 ### Operators
 
 #### Arithematic Operators
 ##### Binary
-* **operator <kbd>+</kbd>** --> Returns BigInteger objects representing addition of two BigInteger objects. `Addition`
-* **operator <kbd>-</kbd>** --> Returns BigInteger objects representing subtraction of two BigInteger objects. `Subtraction`
-* **operator <kbd>*</kbd>** --> Returns BigInteger objects representing multiplication of two BigInteger objects. `Multiplication`
-* **operator <kbd>/</kbd>** --> Returns BigInteger objects representing division of two BigInteger objects. `Division`
+* **operator <kbd>+</kbd>** --> `C=A+B` Returns BigInteger objects representing addition of two BigInteger objects. `Addition`
+* **operator <kbd>-</kbd>** --> `C=A-B` Returns BigInteger objects representing subtraction of two BigInteger objects. `Subtraction`
+* **operator <kbd>*</kbd>** --> `C=A*B` Returns BigInteger objects representing multiplication of two BigInteger objects. `Multiplication`
+* **operator <kbd>/</kbd>** --> `C=A/B` Returns BigInteger objects representing division of two BigInteger objects. `Division`
   > :warning: **Denominator BigInteger object should be in range of long long**: Be very careful here!
-* **operator <kbd>%</kbd>** --> Returns BigInteger objects representing modulus of two BigInteger objects. `Modulus`
+* **operator <kbd>%</kbd>** --> `C=A%B` Returns BigInteger objects representing modulus of two BigInteger objects. `Modulus`
   > :warning: **Denominator BigInteger object should be in range of long long**: Be very careful here!
 
 ##### Unary
-* **operator <kbd>++</kbd>(Prefix)** --> Pre-Increment BigInteger object by 1. `Preincrement`
-* **operator <kbd>++</kbd>(Postfix)** --> Post-Increment BigInteger object by 1. `Postincrement`
-* **operator <kbd>--</kbd>(Prefix)** --> Pre-Decrement BigInteger object by 1. `Predecrement`
-* **operator <kbd>--</kbd>(Postfix)** --> Post-Decrement BigInteger object by 1. `Postdecrement`
-* **operator <kbd>-</kbd>** --> Negate number(Changes its sign) `Unary Minus`
+* **operator <kbd>++</kbd>(Prefix)** --> `++A` Pre-Increment BigInteger object by 1. `Preincrement`
+* **operator <kbd>++</kbd>(Postfix)** --> `A++` Post-Increment BigInteger object by 1. `Postincrement`
+* **operator <kbd>--</kbd>(Prefix)** --> `--A` Pre-Decrement BigInteger object by 1. `Predecrement`
+* **operator <kbd>--</kbd>(Postfix)** --> `A--` Post-Decrement BigInteger object by 1. `Postdecrement`
+* **operator <kbd>-</kbd>** --> `-A` Negate number(Changes its sign) `Unary Minus`
+
+
+#### Assignment Operators
+* **operator <kbd>=</kbd>** --> `A=B` Simple Assignment Operator `Assignment`
+* **operator <kbd>+=</kbd>** --> `(A+=B) == (A=A+B)` Add AND assignment operator `Add & Assignment`
+* **operator <kbd>-=</kbd>** --> `(A-=B) == (A=A-B)` Subtract AND assignment operator `Subtract & Assignment`
+* **operator <kbd>*=</kbd>** --> `(A*=B) == (A=A*B)` Multiply AND assignment operator `Multiply & Assignment`
+* **operator <kbd>/=</kbd>** --> `(A/=B) == (A=A/B)` Divide AND assignment operator `Divide & Assignment`
+  > :warning: **Denominator BigInteger object should be in range of long long**: Be very careful here!
+* **operator <kbd>%=</kbd>** --> `(A%=B) == (A=A%B)` Modulus AND assignment operator `Modulus & Assignment`
+  > :warning: **Denominator BigInteger object should be in range of long long**: Be very careful here!
+
+
+#### Relational Operators
+* **operator <kbd>==</kbd>** --> `A==B` Returns whether BigInteger A is equal to BigIntger B. `isEqual`
+* **operator <kbd>!=</kbd>** --> `A!=B` Returns whether BigInteger A is not equal to BigIntger B. `isNotEqual` 
+* **operator <kbd>></kbd>** -->  `A>B` Returns whether BigInteger A is greater than BigIntger B. `isGreater`
+* **operator <kbd><</kbd>** --> `A<B` Returns whether BigInteger A is less than BigIntger B. `isSmaller`
+* **operator <kbd>>=</kbd>** --> `A>=B` Returns whether BigInteger A is greater than or equal to BigIntger B. `isGreaterOrEqual`
+* **operator <kbd><=</kbd>** --> `A<=B` Returns whether BigInteger A is less than or equal to BigIntger B. `isSmallerOrEqual`
+                                              
+#### Additional Operators
+* **operator <kbd>[]</kbd>** --> `arr[i]` Returns ith index BigInteger in array of BigInteger arr. `Array Index Operator`
+* **operator <kbd>string()</kbd>** --> `string(A)` Returns string form of BigInteger for printing purposes. `String Convertor`  
+
+### What Next?
+Now, just down download the BigInteger.h file from code and include it in your folder. Use the following code snnipet in your code:-
+```cpp
+#include<bits/stdc++.h>
+#include "BigInteger.h"
+using namespace std;
+int main{
+
+    return 0;
+}
+```                                                                                                        
